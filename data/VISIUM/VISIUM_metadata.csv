@@ -1,0 +1,5 @@
+NXTGNT_ID;Sample_Name;Concentration;Volume;amount_DNA;Comment;qubit;Gel_degradation
+1;CRIG_14 TE;42,523;28,5;1,2119055;FFPE samples for QC;5,22;matig
+2;CRIG_14 TC;79,988;28,5;2,279658;FFPE samples for QC;14,2;sterk
+3;CRIG_13 TE 1;30,239;28,5;0,8618115;FFPE samples for QC;4,7;matig
+4;CRIG_13 TC 1;99,618;28,5;2,839113;FFPE samples for QC;22,2;sterk
