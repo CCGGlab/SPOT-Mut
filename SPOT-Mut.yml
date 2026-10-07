@@ -3,22 +3,6 @@ channels:
   - bioconda
 dependencies:
   - python
-  - jupyter
-  - seaborn
-  - matplotlib
-  - scikit-learn=1.5.2
-  - pandas
-  - numpy
-  - ogb
-  - pytorch_geometric
-  - tqdm
-  - networkx
-  - torchvision
-  - keras-tuner
-  - texlive-core
-  - torchmetrics
-  - optuna
-  - kornia
   - rpy2
   - biopython
   - bioconductor-maftools
@@ -30,7 +14,6 @@ dependencies:
   - bioconductor-enrichedheatmap
   - bioconductor-genomicranges=1.58.0
   - bioconductor-sva
-  - shap
   - r-base
   - r-r.utils
   - r-essentials
@@ -62,5 +45,28 @@ dependencies:
   - r-devtools
   - r-lifecycle>=1.0.5
   - r-rlang>=1.1.7
-  - cnvkit
   - uv
+  - pip
+  - git-lfs
+  - pip:
+    - captum>=0.8.0
+    - jupyter
+    - keras-tuner
+    - kornia
+    - matplotlib
+    - networkx
+    - numpy
+    - ogb
+    - openpyxl>=3.1.5
+    - optuna
+    - pandas
+    - scikit-posthocs>=0.12.0
+    - seaborn
+    - statsmodels>=0.14.6
+    - torch-geometric
+    - torchmetrics
+    - torchvision
+    - scikit-learn
+    - tqdm
+    - keras-tuner
+    - shap
