@@ -7,8 +7,11 @@ import pickle as pkl
 base_path = "data/attributions/"
 top_k = 25
 dataset = pd.read_csv(os.path.join("data", "LogNormalized_ALL_counts.csv.gz"), index_col=0).T
-with open('data/test_data_log_RobustScale_GNN_Final_2024-11-15-12-31-03.pkl','rb') as test_f:
-    test_data, meta_test = pkl.load(test_f)
+with open('data/TCGA_test_data_graphs_1.pkl','rb') as test_f:
+    test_data_p1 = pkl.load(test_f)
+with open('data/TCGA_test_data_graphs_2.pkl','rb') as test_f:
+    test_data_p2 = pkl.load(test_f)
+test_data = {**test_data_p1, **test_data_p2}
 # ---- Get feature names ----
 names = dataset.columns[:-1].tolist()
 
