@@ -39,7 +39,7 @@ The input count dataset (`dataset` variable) is the log1p-transformed TCGA expre
 - Mitochondrial genes
 - genes not also profiled in DepMap CCLE (see above for download) or a [representative 10X Genomics Visium experiment](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM4565825).
 
-```python
+```
 scripts/TCGA_selection_and_preprocessing.py
 ```
 
