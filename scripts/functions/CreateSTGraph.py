@@ -5,9 +5,10 @@ import matplotlib.pyplot as plt
 def CreateSTGraph(ST, num_circles = 4, grid_size = 65, circle_radius = [4,8], ones = False, n_slides = 1, seed = np.nan):
     ## Function to create a new spatial transcriptomics (ST) slide with each spot being represented as a node in a graph.
     ## Each node in the Graph is connected to it's 8 neighbouring node (or less if it is at the edge of the ST slide).
-    ## Each node contains a transcriptional profile taken from the 'dataset' input variable.
-    ## This 'dataset' variable should be a normalized expression matrix loaded as a pandas dataframe with the rows being the samples and the columns being the genes
-    ## Last column should be the binary target
+    ## Each node contains a transcriptional profile taken from the 'ST' input variable.
+    ## This 'ST' variable should be a normalized expression matrix loaded as a pandas dataframe with the rows being the samples and the columns being the genes
+    ## Last column should be the binary target!
+    ##
     ## precompute datasets
     data1 = ST[ST.iloc[:, -1] == 1]
     data1_idx = len(data1.index)

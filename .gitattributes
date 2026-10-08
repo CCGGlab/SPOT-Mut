@@ -3,3 +3,5 @@ data/TP53_model.pt filter=lfs diff=lfs merge=lfs -text
 data/LogNormalized_ALL_counts.csv.gz filter=lfs diff=lfs merge=lfs -text
 data/VISIUM/lazy_shiny_data.rdb filter=lfs diff=lfs merge=lfs -text
 data/TCGA_test_data_graphs_* filter=lfs diff=lfs merge=lfs -text
+data/LogNormalized_ALL_counts.csv filter=lfs diff=lfs merge=lfs -text
+data/hg38_exome_v2.0.2_targets_sorted_validated.re_annotated.bed filter=lfs diff=lfs merge=lfs -text
