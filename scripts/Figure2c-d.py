@@ -13,6 +13,26 @@ print(device)
 
 bootstrap_results = pkl.load(open("../data/Mutation_Classes_100bootstrap_recall_results.pkl", "rb"))
 
+def compute_rank_biserial_coefficient(result, group1_len, group2_len):
+    rank_biserial = 2 * result / (group1_len * group2_len) - 1
+    return rank_biserial
+
+comparisons = [
+    ('High Purity', 'Low Purity'),
+    ('Double Hit', 'Single Hit'),
+    ('Double Hit', 'WT CNV LOH'),
+    ('Single Hit', 'WT CNV LOH'),
+    ('Truncating', 'Only Missense'),
+    ('Truncating', 'True Silent'),
+    ('Only Missense', 'True Silent'),
+    ('High Impact LOH', 'Low Impact LOH'),
+    ('High Impact CNN', 'Low Impact CNN')
+]
+for name in comparisons:
+    result, p = mannwhitneyu(bootstrap_results[name[0]], bootstrap_results[name[1]], alternative='greater')
+    print(f"{name[0]} vs {name[1]} p-value: {np.format_float_scientific(p, precision=2)} \t rank-biserial coefficient: {compute_rank_biserial_coefficient(result, len(bootstrap_results[name[0]]), len(bootstrap_results[name[1]])):.4f}")
+
+
 ## Plot Code
 #### Fig 2c ####
 

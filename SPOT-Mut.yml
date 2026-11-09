@@ -45,7 +45,7 @@ dependencies:
   - r-devtools
   - r-lifecycle>=1.0.5
   - r-rlang>=1.1.7
-  - uv
+  - uv>=0.13.4
   - pip
   - git-lfs
   - pip:
